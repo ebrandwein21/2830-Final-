@@ -1,0 +1,80 @@
+/* Maximalist styles */
+.footer {
+    background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ffff00, #ff00ff, #00ffff);
+    background-size: 600% 600%;
+    animation: footerBackgroundAnimation 10s ease infinite;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-shadow: 2px 2px 4px #000;
+    border-top: 10px double #fff;
+}
+
+@keyframes footerBackgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.footer p {
+    margin: 20px 0;
+    font-size: 2em;
+    animation: footerTextGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes footerTextGlow {
+    from { text-shadow: 0 0 10px #fff, 0 0 20px #fff; }
+    to { text-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff; }
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5em;
+    animation: footerLinkPulse 1s infinite alternate;
+}
+
+@keyframes footerLinkPulse {
+    from { color: #ff0000; }
+    to { color: #ffff00; }
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    animation: footerLinkHover 0.5s infinite alternate;
+}
+
+@keyframes footerLinkHover {
+    from { text-shadow: 0 0 5px #00ff00; }
+    to { text-shadow: 0 0 15px #00ff00; }
+}
+
+/* Minimalist styles */
+body.minimalist .footer {
+    background-color: #f8f9fa !important;
+    color: #343a40 !important;
+    padding: 20px !important;
+    border-top: 1px solid #dee2e6 !important;
+    text-shadow: none !important;
+    animation: none !important;
+    background: none !important;
+}
+
+body.minimalist .footer p {
+    margin: 0 !important;
+    font-size: 1em !important;
+    animation: none !important;
+}
+
+body.minimalist .footer a {
+    color: #007bff !important;
+    text-decoration: none !important;
+    animation: none !important;
+}
+
+body.minimalist .footer a:hover {
+    text-decoration: underline !important;
+    animation: none !important;
+}

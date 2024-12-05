@@ -1,23 +1,38 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
+import Header from './components/Header/Header';
+import Home from './pages/Home/Home';
+import Footer from './components/Footer/Footer';
 import './App.css';
 
 function App() {
+  const [isMinimalist, setIsMinimalist] = useState(() => {
+    const savedTheme = localStorage.getItem('isMinimalist');
+    return savedTheme ? JSON.parse(savedTheme) : false;
+  });
+
+  const handleToggleTheme = () => {
+    setIsMinimalist((prevTheme) => {
+      const newTheme = !prevTheme;
+      localStorage.setItem('isMinimalist', JSON.stringify(newTheme));
+      return newTheme;
+    });
+  };
+
+  useEffect(() => {
+    if (isMinimalist) {
+      document.body.classList.add('minimalist');
+      document.body.classList.remove('maximalist');
+    } else {
+      document.body.classList.add('maximalist');
+      document.body.classList.remove('minimalist');
+    }
+  }, [isMinimalist]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Header onToggleTheme={handleToggleTheme} isMinimalist={isMinimalist} />
+      <Home />
+      <Footer />
     </div>
   );
 }

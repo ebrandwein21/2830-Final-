@@ -1,0 +1,108 @@
+/* Maximalist styles */
+.video-card {
+    background: linear-gradient(135deg, #ff00ff, #00ffff);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 5px groove #ff0000;
+    box-shadow: 0 0 20px #00ff00;
+    transform: skew(-5deg);
+    transition: transform 0.5s, box-shadow 0.5s;
+    animation: cardPulse 2s infinite;
+}
+
+@keyframes cardPulse {
+    0% { box-shadow: 0 0 20px #00ff00; }
+    50% { box-shadow: 0 0 40px #ff00ff; }
+    100% { box-shadow: 0 0 20px #00ff00; }
+}
+
+.video-card:hover {
+    transform: skew(5deg) scale(1.1);
+    box-shadow: 0 0 50px #ffff00;
+}
+
+.video-title {
+    margin: 0;
+    padding: 20px;
+    font-size: 2em;
+    background: repeating-linear-gradient(
+      45deg,
+      #ff0000,
+      #ff0000 10px,
+      #ffff00 10px,
+      #ffff00 20px
+    );
+    color: #fff;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    animation: titleFlash 1s infinite alternate;
+}
+
+@keyframes titleFlash {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    border-top: 5px solid #ff0000;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    filter: hue-rotate(0deg);
+    animation: iframeHueRotate 5s linear infinite;
+}
+
+@keyframes iframeHueRotate {
+    from { filter: hue-rotate(0deg); }
+    to { filter: hue-rotate(360deg); }
+}
+
+/* Minimalist styles */
+body.minimalist .video-card {
+    background-color: #fff !important;
+    border: 1px solid #dee2e6 !important;
+    border-radius: 5px !important;
+    overflow: hidden !important;
+    box-shadow: none !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+    border: none !important;
+    background: none !important;
+}
+
+body.minimalist .video-card:hover {
+    transform: none !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) !important;
+}
+
+body.minimalist .video-title {
+    padding: 15px !important;
+    font-size: 1.25em !important;
+    background-color: #fff !important;
+    color: #212529 !important;
+    text-align: left !important;
+    text-transform: none !important;
+    animation: none !important;
+    font-family: "Helvetica", sans-serif !important;
+    background: none !important;
+}
+
+body.minimalist .video-wrapper {
+    border-top: none !important;
+}
+
+body.minimalist .video-wrapper iframe {
+    filter: none !important;
+    animation: none !important;
+}
