@@ -1,0 +1,22 @@
+p {
+    font-family: "Helvetica", sans-serif;
+    font-size: 14px;
+}
+
+
+#video-selector 
+ {
+    margin: 20px 5px 0 5px;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left: 0;
+    margin-top: 60px;
+    padding-top: 20px;
+}
+
+.video_container{
+
+}
+ 
