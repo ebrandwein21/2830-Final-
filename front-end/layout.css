@@ -49,6 +49,43 @@ p {
 
 .video-title:hover {
     text-decoration: underline; 
+    color: darkblue;
+}
+#logo-container{
+    margin-left: 75px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.images {
+    width: 295px;
+    height: 175px;
+    margin-bottom: 5px;
+}
+
+.video-description {
+    display: inline-flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.video-details {
+    width: 200px;
+    margin-top: 3px;
+    margin-left: 10px;
+    justify-self: flex-end;
+    gap: 5x;
+}
+
+.video-title {
+    font-weight: normal;
+    color: blue;
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+
+.video-title:hover {
+    text-decoration: underline; 
     color: darkblue;  
 }
 #logo-container{

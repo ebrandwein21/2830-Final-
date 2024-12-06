@@ -1,0 +1,100 @@
+/* Maximalist styles */
+.header {
+    background: radial-gradient(circle at center, #ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff);
+    background-size: 200% 200%;
+    animation: headerBackgroundAnimation 15s linear infinite;
+    padding: 60px 20px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    border-bottom: 10px double #fff;
+}
+
+@keyframes headerBackgroundAnimation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 5em;
+    font-family: 'Impact', sans-serif;
+    letter-spacing: 5px;
+    animation: headerTextRainbow 3s linear infinite;
+}
+
+@keyframes headerTextRainbow {
+    0% { color: #ff0000; }
+    17% { color: #ffff00; }
+    34% { color: #00ff00; }
+    51% { color: #00ffff; }
+    68% { color: #0000ff; }
+    85% { color: #ff00ff; }
+    100% { color: #ff0000; }
+}
+
+.tagline {
+    margin-top: 20px;
+    font-size: 2em;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    animation: taglineWave 2s infinite;
+}
+
+@keyframes taglineWave {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+}
+
+.logo-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    animation: logoSpin 5s linear infinite;
+}
+
+@keyframes logoSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 3em;
+    }
+}
+
+/* Minimalist styles */
+body.minimalist .header {
+    background-color: #fff !important;
+    padding: 20px !important;
+    color: #212529 !important;
+    border-bottom: 1px solid #dee2e6 !important;
+    animation: none !important;
+    background: none !important;
+}
+
+body.minimalist .header h1 {
+    font-size: 2em !important;
+    color: #212529 !important;
+    animation: none !important;
+    text-shadow: none !important;
+    font-family: "Helvetica", sans-serif !important;
+    letter-spacing: normal !important;
+}
+
+body.minimalist .tagline {
+    margin-top: 10px !important;
+    font-size: 1em !important;
+    color: #6c757d !important;
+    animation: none !important;
+    font-family: "Helvetica", sans-serif !important;
+}
+
+body.minimalist .logo-container {
+    position: static !important;
+    margin-bottom: 10px !important;
+    animation: none !important;
+}

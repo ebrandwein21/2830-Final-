@@ -1,0 +1,38 @@
+/* Maximalist styles */
+body.maximalist {
+    background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff);
+    background-size: 400% 400%;
+    animation: bodyBackgroundAnimation 20s ease infinite;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><circle cx="5" cy="5" r="5" fill="red"/></svg>') 5 5, auto;
+}
+
+@keyframes bodyBackgroundAnimation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+/* Minimalist styles */
+body.minimalist {
+    background-color: #f8f9fa !important;
+    animation: none !important;
+    cursor: default !important;
+    background: none !important;
+}
+
+/* Reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica", sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+p {
+    line-height: 1.6;
+}
