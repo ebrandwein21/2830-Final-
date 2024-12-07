@@ -6,7 +6,6 @@ export function useVideos() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // USE DB INSTEAD
     fetch('/videos.json')
       .then((response) => response.json())
       .then((data) => {
