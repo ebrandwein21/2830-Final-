@@ -6,7 +6,6 @@ export function useVideos() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Replace fetchVideos with your actual data fetching function
     fetch('/videos.json')
       .then((response) => response.json())
       .then((data) => {
