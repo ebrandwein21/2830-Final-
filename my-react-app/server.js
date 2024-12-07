@@ -31,6 +31,8 @@ app.use(bodyParser.json());
 async function findVideos() {
   try {
     await client.connect();
+    await client.db("admin").command({ ping: 1 });
+    console.log("Pinged your deployment. You successfully connected to MongoDB!");
     const database = client.db(DATABASE_NAME);
     const videoCollection = database.collection(COLLECTION_NAME);
 
